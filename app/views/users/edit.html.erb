@@ -1,0 +1,10 @@
+<h1>Users#edit</h1>
+
+<h2>プロフィール編集</h2>
+<%= form_with model: @user do |f| %>
+  <label for = "inputName">Name</label>
+  <%= f.text_field :name, autofocus: true, id: "inputName", placeholder: "Name" %>
+  <label for = "inputImage" >ProfileImage</label>
+  <%= f.file_field :profile_image, placeholder: "Profile Image", accept: "image/*" %>
+  <%= f.submit "Save" %>
+<% end %>
